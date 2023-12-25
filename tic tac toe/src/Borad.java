@@ -1,7 +1,6 @@
 public class Borad {
     public boolean win=false;
     public char[][] borad;
-    Players print=Players.inputPlayers();
     Game g=new Game();
     public Borad(){
         borad=new char[3][3];

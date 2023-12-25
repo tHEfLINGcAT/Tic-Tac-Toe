@@ -2,7 +2,7 @@ import java.util.Scanner;
         public  class Players {
         public String player_1;
         public String player_2;
-        public  Players(String player_1,String player_2){
+        public Players(String player_1,String player_2){
             this.player_1=player_1;
             this.player_2=player_2; 
         }
@@ -18,7 +18,6 @@ import java.util.Scanner;
         public void setPlayer_2(String player_2){
             this.player_2=player_2;
         }
-
         public static Players inputPlayers(){
             Scanner s=new Scanner(System.in);
             System.out.println("Enter the name of player 1:");
