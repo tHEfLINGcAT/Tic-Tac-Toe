@@ -1,3 +1,5 @@
+import javafx.stage.Window;
+
 public class Borad {
     public boolean win = false;
     public char[][] borad;
@@ -20,25 +22,23 @@ public class Borad {
     }
 
     public void endgame() {
-        if (borad[0][0] == borad[0][1] && borad[0][1] == borad[0][2]) {
+        if (((borad[0][0] == borad[0][1] && borad[0][1] == borad[0][2]))&&((borad[0][0]!=0&&borad[0][1]!=0||borad[0][2]!=0))) {
             win = true;
-        } else if (borad[1][0] == borad[1][1] && borad[1][1] == borad[1][2]) {
+        } else if (((borad[1][0] == borad[1][1] && borad[1][1] == borad[1][2]))&&((borad[1][0]!=0||borad[1][1]!=0||borad[1][2]!=0))) {
+            win = true; 
+        } else if (((borad[2][0] == borad[2][1] && borad[2][1] == borad[2][2]))&&((borad[2][0]!=0||borad[2][1]!=0||borad[2][2]!=0))) {
             win = true;
-        } else if (borad[2][0] == borad[2][1] && borad[2][1] == borad[2][2]) {
+        }else if(((borad[0][0] == borad[1][0] && borad[1][0] == borad[2][0]))&&((borad[0][0]!=0||borad[1][0]!=0||borad[2][0]!=0))){
+            win=true;
+        } else if (((borad[0][1] == borad[1][1] && borad[1][1] == borad[2][1]))&&((borad[0][1]!=0||borad[1][1]!=0||borad[2][1]!=0))) {
             win = true;
-        }
-
-        else if (borad[0][0] == borad[1][0] && borad[1][0] == borad[2][0]) {
-            win = true;
-        } else if (borad[0][1] == borad[1][1] && borad[1][1] == borad[2][1]) {
-            win = true;
-        } else if (borad[0][2] == borad[1][2] && borad[1][2] == borad[2][2]) {
+        } else if (((borad[0][2] == borad[1][2] && borad[1][2] == borad[2][2]))&&((borad[0][2]!=0||borad[1][2]!=0||borad[2][2]!=0))) {
             win = true;
         }
 
-        else if (borad[0][0] == borad[1][1] && borad[1][1] == borad[2][2]) {
+        else if (((borad[0][0] == borad[1][1] && borad[1][1] == borad[2][2]))&&((borad[0][0]!=0||borad[1][1]!=0||borad[2][2]!=0))) {
             win = true;
-        } else if (borad[0][2] == borad[1][1] && borad[1][1] == borad[2][0]) {
+        } else if (((borad[0][2] == borad[1][1] && borad[1][1] == borad[2][0]))&&((borad[0][2]!=0||borad[1][1]!=0||borad[2][0]!=0))) {
             win = true;
         }
     }
@@ -50,7 +50,7 @@ public class Borad {
                 }
             }
         }
-        return !win;
+    return !win;
     }
 
     public char[][] getBorad() {
