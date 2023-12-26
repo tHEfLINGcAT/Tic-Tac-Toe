@@ -8,7 +8,7 @@ public class Game {
     public void innerLoop() {
         Scanner s = new Scanner(System.in);
         while (b.getWin() == false || !b.drawCheck()) {
-            System.out.println("player 1 turn:");
+            System.out.println(p.player_1+"'s turn:");
             x_row = s.nextInt() - 1;
             while (x_row < 0 || x_row > 3) {
                 System.out.println("the number cant be below 0 or above 3");
@@ -33,7 +33,7 @@ public class Game {
             if (b.drawCheck()) {
                 break;
             }
-            System.out.println("player 2 turn:");
+            System.out.println(p.player_2+"'s turn:");
             x_row = s.nextInt() - 1;
             while (x_row < 0 || x_row > 3) {
                 System.out.println("the number cant be below 0 or above 3");
